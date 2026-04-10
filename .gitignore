@@ -1,0 +1,27 @@
+# 민감 정보
+.env
+.env.*
+*.pem
+*.key
+
+# 의존성
+node_modules/
+
+# macOS 시스템 파일
+.DS_Store
+Icon
+Icon?
+
+# 빌드 산출물
+dist/
+build/
+.next/
+out/
+
+# 로그
+*.log
+npm-debug.log*
+
+# IDE
+.vscode/
+.idea/
