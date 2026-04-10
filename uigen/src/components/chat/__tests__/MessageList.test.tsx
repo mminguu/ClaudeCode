@@ -78,7 +78,11 @@ test("MessageList renders messages with parts", () => {
   render(<MessageList messages={messages} />);
 
   expect(screen.getByText("Creating your component...")).toBeDefined();
-  expect(screen.getByText("str_replace_editor")).toBeDefined();
+  // The raw tool name is now replaced with a friendly message via ToolInvocationMessage.
+  // With empty args (no command), str_replace_editor falls back to "File editor".
+  expect(
+    screen.getByTestId("tool-invocation-message").textContent
+  ).toContain("File editor");
 });
 
 test("MessageList shows content for assistant message with content", () => {

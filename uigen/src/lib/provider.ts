@@ -139,7 +139,7 @@ export class MockLanguageModel implements LanguageModelV1 {
 
     // Step 3: Create App.jsx
     if (toolMessageCount === 0) {
-      const text = `This is a static response. You can place an Anthropic API key in the .env file to use the Anthropic API for component generation. Let me create an App.jsx file to display the component.`;
+      const text = `안녕하세요! 지금은 데모 모드로 동작 중이에요. 실제 AI 기반 컴포넌트 생성을 이용하시려면 .env 파일에 Anthropic API 키를 등록해 주세요. 우선 미리 준비된 예시 컴포넌트를 보여드릴게요 — App.jsx 파일을 만들어 화면에 표시해 드리겠습니다.`;
       for (const char of text) {
         yield { type: "text-delta", textDelta: char };
         await this.delay(15);
